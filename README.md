@@ -1,5 +1,3 @@
-Here’s the updated README file incorporating the name of your university:
-
 # File Upload System (FUS)
 
 Welcome to the File Upload System (FUS)! This project is designed to help students at Chandpur Science and Technology University (CSTU) easily upload and manage their files and documents. It addresses the challenge of uploading files while using lab PCs, where logging into Google Drive or other services is often impractical. With this system, students can create an account and upload their files through a user-friendly interface.
