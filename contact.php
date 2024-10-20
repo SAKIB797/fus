@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php include 'components/header.php' ?>
     <main class="flex-grow min-h-dvh flex flex-col justify-center">
       <div
-        class="grid sm:grid-cols-2 items-start gap-16 p-6 sm:p-6 mx-auto max-w-4xl bg-white font-[sans-serif] sm:-mt-[100px] md:-mt-[120px] lg:-mt-[170px] ">
+        class="grid sm:grid-cols-2 items-end gap-16 p-6 md:p-10 mx-auto max-w-4xl bg-white font-[sans-serif] -mt-[80px] sm:-mt-[100px] md:-mt-[120px] lg:-mt-[170px] ">
         <div>
           <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
           <p class="text-sm text-gray-500 mt-4">Got a big idea or project that needs efficient file management? Reach
@@ -119,7 +119,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
           <div class="mt-8 sm:mt-12">
             <h2 class="text-gray-800 text-base font-bold">Socials</h2>
-
             <ul class="flex mt-4 space-x-4">
               <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">

@@ -28,13 +28,12 @@
 
     <main class="container mx-auto flex-grow">
       <!-- About FUS Section -->
-      <section
-        class="min-h-screen mx-4  flex flex-col justify-center -mt-[50px] md:-mt-[100px] lg:-mt-[120px]   md:mx-8 lg:mx-15 xl:mb-20">
+      <section class="md:min-h-screen mx-4  flex flex-col justify-center md:-mt-[100px]  md:mx-8 lg:mx-15 my-10">
         <div class="container max-w-screen-xl mx-auto grid grid-cols-1 items-center md:grid-cols-5 ">
           <!-- Left Side: Text -->
           <div class=" mb-6 md:mb-0 px-4 md:col-span-3  ">
             <h1 class=" text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">About FUS</h1>
-            <p class=" lg:text-lg text-gray-700 mb-4">
+            <p class=" lg:text-lg text-gray-700 mb-4 ">
               The <strong class="font-semibold">File Upload System (FUS)</strong> is a user-friendly platform designed
               to
               assist students at <strong>Chandpur Science and Technology University (CSTU)</strong> in easily uploading
@@ -51,15 +50,17 @@
           </div>
 
           <!-- Right Side: Image -->
-          <div class=" px-4 hidden  md:col-span-2 md:block ">
-            <img src="img/5614966_2933150.svg" alt="About FUS Image" class=" h-auto rounded-lg  object-cover">
+          <div class="hidden px-4  md:col-span-2 md:block ">
+            <lottie-player class=" h-[300px] md:h-[450px]" src="./lottie/Animation - 1729402925731.json"
+              background="transparent" speed="1" loop autoplay>
+            </lottie-player>
           </div>
         </div>
       </section>
 
 
       <!-- Developer Profile Section -->
-      <section class="min-h-screen  flex flex-col justify-center mx-8">
+      <section class="  flex flex-col justify-center mx-8 mb-[100px]">
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-6 md:mb-8 underline">
           Developer Profile</h2>
 

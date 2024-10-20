@@ -237,17 +237,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
       <?php else: ?>
         <!-- Hero section -->
-        <section class="bg-base-100 min-h-screen mx-4 md:flex flex-col justify-center md:-mt-[100px] lg:-mt-[120px] ">
-          <div class="grid max-w-screen-xl px-4 md:px-8 lg:px-12 py-8 mx-auto md:gap-8 xl:gap-0 md:py-10 md:grid-cols-12">
-            <div class="mr-auto place-self-center md:col-span-7">
+        <section class="bg-base-100 min-h-screen mx-4 md:flex flex-col justify-center md:-mt-[100px]  ">
+          <div class="grid max-w-screen-xl px-4 md:px-8 lg:pl-12 lg:pr-0 py-8 mx-auto md:gap-8 xl:gap-0 md:py-10 md:grid-cols-12">
+            <div class="order-2 md:order-1 mr-auto place-self-center md:col-span-6">
               <h1
-                class="max-w-2xl mb-4 text-3xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-primary-content">
+                class="max-w-2xl mb-4 text-xl  font-extrabold tracking-tight leading-none md:text-3xl lg:text-5xl xl:text-6xl dark:text-primary-content">
                 Easy File Upload for CSTU's Students
               </h1>
               <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                 Simplify your file submissions with a user-friendly platform. Upload your documents and manage your files
                 efficiently with FUS.
               </p>
+
               <?php if (!isset($_SESSION['userID'])): ?>
                 <a href="registration.php"
                   class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-primary-focus focus:ring-4 focus:ring-primary-content">
@@ -261,8 +262,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 </a>
               <?php endif; ?>
             </div>
-            <div class="hidden md:mt-0 md:col-span-5 md:flex">
-              <img src="img/upload.gif" alt="mockup" class=" w-full h-full rounded-lg">
+            <div class="order-1 md:order-2 md:mt-0 md:col-span-6 md:flex">
+              <lottie-player src="./lottie/Animation - 1729400760027.json" background="transparent" speed="1" loop
+                autoplay>
+              </lottie-player>
             </div>
           </div>
         </section>
