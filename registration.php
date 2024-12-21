@@ -3,6 +3,14 @@ require 'db/config.php';
 if (isset($_SESSION['userID'])) {
   header("Location: index.php");
 }
+
+$tab="";
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['tab'])) {
+  $tab = $_GET['tab'];
+}
+
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $action = $_POST['action'];
@@ -131,17 +139,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $action == 'login') {
 
         <div class="flex justify-center">
           <div role="tablist" class="tabs tabs-boxed">
-            <label for="upload-tab" class="tab tab-lifted text-primary tab-active">
+            <label for="upload-tab" class="tab tab-lifted text-primary <?php echo $tab ? "" : "tab-active"; ?>">
               Login
             </label>
 
-            <label for="library-tab" class="tab tab-lifted text-primary">
+            <label for="library-tab" class="tab tab-lifted text-primary <?php echo $tab ? "tab-active" : ""; ?>">
               Registration
             </label>
           </div>
         </div>
 
-        <input type="radio" id="upload-tab" name="my_tabs" class="hidden peer/upload-tab" checked />
+        <!-- Tab content for file upload -->
+        <input type="radio" id="upload-tab" name="my_tabs" class="hidden peer/upload-tab" <?php echo $tab ? "" : "checked"; ?> />
         <div role="tabpanel" class="tab-content mx-8 bg-base-100 rounded-box   peer-checked/upload-tab:block">
           <!--login form here -->
           <form action="" method="POST"
@@ -191,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $action == 'login') {
 
             <div>
               <p class="text-center text-sm ">
-                <a href="reset-password.php" class="text-sm text-blue-500 hover:underline mt-2">
+                <a href="reset-password" class="text-sm text-blue-500 hover:underline mt-2">
                   <i class="fas fa-unlock-alt"></i> Forgot Password?
                 </a>
               </p>
@@ -201,7 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $action == 'login') {
         </div>
 
         <!-- Tab content for Library -->
-        <input type="radio" id="library-tab" name="my_tabs" class="hidden peer/library-tab" />
+        <input type="radio" id="library-tab" name="my_tabs" class="hidden peer/library-tab" <?php echo $tab ? "checked" : ""; ?> />
         <div role="tabpanel" class="tab-content mx-8 bg-base-100 rounded-box hidden peer-checked/library-tab:block">
           <!-- registration form here -->
           <form action="" method="POST" enctype="multipart/form-data"
@@ -344,7 +353,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $action == 'login') {
 
             <p class="text-center text-sm mt-6">
               Already have an account?
-              <a href="#" class="text-blue-500 hover:underline">Login</a>
+              <a href="registration" class="text-blue-500 hover:underline">Login</a>
             </p>
           </form>
 

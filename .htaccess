@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Ensure the file exists by appending ".php"
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]

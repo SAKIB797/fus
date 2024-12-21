@@ -144,7 +144,7 @@ if (isset($_GET['token'])) {
           </div>
           <!-- Back to Login Link -->
           <div class="text-sm mt-4 text-center ">
-            <a href="registration.php" class="text-blue-500 hover:underline">
+            <a href="registration" class="text-blue-500 hover:underline">
               <i class="fa fa-arrow-left"></i> Back to Login
             </a>
           </div>
@@ -179,7 +179,7 @@ if (isset($_GET['token'])) {
               </a>
             </div>
             <div class="text-sm mt-4 text-center">
-              <a href="reset-password.php" class="text-blue-500 hover:underline">
+              <a href="reset-password" class="text-blue-500 hover:underline">
                 <i class="fa fa-arrow-left"></i> New reset request
               </a>
             </div>

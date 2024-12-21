@@ -32,29 +32,29 @@ if (isset($_SESSION['userID'])) {
         </svg>
       </button>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-lg">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </div>
-    <a href="index.php" class="text-xl hidden lg:inline">FUS</a>
+    <a href="/" class="text-xl hidden lg:inline">FUS</a>
   </div>
 
   <div class="lg:hidden">
-    <a href="index.php" class="text-xl">FUS</a>
+    <a href="/" class="text-xl">FUS</a>
   </div>
 
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="about.php">About</a></li>
-      <li><a href="contact.php">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </div>
 
   <div class="navbar-end">
     <?php if (!isset($_SESSION['userID'])): ?>
-      <a href="registration.php" class="btn btn-sm z-50">Login</a>
+      <a href="registration?tab=reg" class="btn btn-sm z-50">Login</a>
     <?php else: ?>
       <div x-data="{ isOpen: false }" class="relative">
         <button @click="isOpen = !isOpen" class="flex items-center">
@@ -72,7 +72,7 @@ if (isset($_SESSION['userID'])) {
           </div>
           <hr class="my-4">
           <div class="mb-6">
-            <a href="profile.php" class="flex items-center px-3 py-2 hover:bg-blue-100  rounded-md">
+            <a href="profile" class="flex items-center px-3 py-2 hover:bg-blue-100  rounded-md">
               <svg class="w-6 h-6 mr-3 text-blue-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -81,7 +81,7 @@ if (isset($_SESSION['userID'])) {
               </svg>
               View Profile
             </a>
-            <a href="functions/logout.php" class="flex items-center px-3 py-2 text-red-600 hover:bg-red-100  rounded-md">
+            <a href="functions/logout" class="flex items-center px-3 py-2 text-red-600 hover:bg-red-100  rounded-md">
               <svg class="w-6 h-6 mr-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H3m0 0l-3 3m3-3l3-3" />
