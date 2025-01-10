@@ -74,7 +74,7 @@
             <p class="text-gray-600 mb-4">
               Iftekhar is the developer behind FUS. As a student at CSTU, he designed this platform to simplify file
               uploads
-              for fellow students. John is passionate about building efficient solutions to improve academic workflows.
+              for fellow students. He is passionate about building efficient solutions to improve academic workflows.
             </p>
             <div class="mb-4">
               <p class="text-sm text-gray-500 mb-2">
